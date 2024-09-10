@@ -34,18 +34,23 @@
 
 <!-- Script to fetch and render Markdown -->
 <script>
-    // Ensure Marked.js is loaded before using it
-    if (typeof marked !== 'undefined') {
-        fetch('https://konskypr-14.github.io/ABAP-Helper/debugger_intro.md')
-            .then(response => response.text())
-            .then(markdown => {
-                // Convert markdown to HTML using Marked.js
-                document.getElementById('content').innerHTML = marked(markdown);
-            })
-            .catch(error => console.error('Error loading markdown:', error));
-    } else {
-        console.error('Marked.js is not loaded');
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof marked !== 'undefined') {
+            fetch('debugger_intro.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    document.getElementById('content').innerHTML = marked(markdown);
+                })
+                .catch(error => console.error('Error loading markdown:', error));
+        } else {
+            console.error('Marked.js is not loaded');
+        }
+    });
 </script>
 
 </body>
