@@ -26,6 +26,24 @@
 <section id="content">
     <!-- Markdown content will be loaded here -->
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof marked !== 'undefined') {
+            const staticMarkdown = `
+# Introduction to debugger
+
+### What is the ABAP debugger and how can it help us?
+
+When a developer creates a program, despite all the help available, whether it be syntax checks or software checks during compilation, it regularly happens that everything is not perfect, and that certain problems have not been considered.
+
+Thus, it is undeniable that the ABAP debugger is primarily a tool for developers to help them avoid this kind of message, which is called "a Dump". Indeed, it is a very important tool that allows developers to analyze ABAP programs, correct errors, understand the logic, and check live values in a table retrieval.
+            `;
+            document.getElementById('content').innerHTML = marked(staticMarkdown);
+        } else {
+            console.error('Marked.js is not loaded');
+        }
+    });
+</script>
 
 <!-- Footer -->
 <footer>
