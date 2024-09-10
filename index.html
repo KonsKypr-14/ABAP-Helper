@@ -5,80 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My GitHub Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        header {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        h2 {
-            margin-top: 0;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
 </head>
 <body>
 
 <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="contact.html">Contact</a> <!-- Navigate to contact.html -->
 </nav>
 
 <header>
@@ -94,32 +28,15 @@
     <h2>My Projects</h2>
     <p>Here are a few of my projects hosted on GitHub:</p>
     <ul>
-        <li><a href="https://github.com/KonsKypr-14/alv_with_button.md">Project 1</a></li>
+        <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
         <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
         <li><a href="https://github.com/yourusername/project3">Project 3</a></li>
     </ul>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <button onclick="showEmail()">Show Email</button>
-    <p id="email" class="hidden">youremail@example.com</p>
-</section>
-
 <footer>
     <p>&copy; 2024 Your Name</p>
 </footer>
-
-<script>
-    function showEmail() {
-        var email = document.getElementById('email');
-        if (email.classList.contains('hidden')) {
-            email.classList.remove('hidden');
-        } else {
-            email.classList.add('hidden');
-        }
-    }
-</script>
 
 </body>
 </html>
