@@ -6,6 +6,7 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
 nav {
@@ -37,6 +38,7 @@ header h1 {
     margin: 0;
 }
 
+/* Allow section to grow and take up remaining space */
 section {
     max-width: 800px;
     margin: 20px auto;
@@ -44,93 +46,96 @@ section {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Allow section to grow in height */
 }
 
+/* Remove fixed positioning from footer */
 footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
+					
+			  
     width: 100%;
 }
 
-h2 {
-    margin-top: 0;
-}
-
-.contact-info {
-    font-size: 18px;
-}
-
-/* WARNING styling */
-.warning {
-    border-left: 4px solid #f39c12; /* Orange color for warning */
-    background-color: #fef5e7;      /* Light orange background */
+/* Styling for alerts */
+.warning, .note, .tip, .important, .caution {
     padding: 10px;
     margin: 20px 0;
     border-radius: 5px;
+
+			   
+					
+}
+
+					 
+.warning {
+    border-left: 4px solid #f39c12;
+    background-color: #fef5e7;
+				  
+				   
+					   
 }
 
 .warning strong {
-    color: #c0392b; /* Red text for emphasis */
-    display: block; /* Ensures the text following it starts on a new line */
+    color: #c0392b;
+    display: block;
 }
 
-/* NOTE styling */
+				  
 .note {
-    border-left: 4px solid #3498db; /* Blue color for note */
-    background-color: #eaf2f8;      /* Light blue background */
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
+    border-left: 4px solid #3498db;
+    background-color: #eaf2f8;
+				  
+				   
+					   
 }
 
 .note strong {
-    color: #1f618d; /* Dark blue text for emphasis */
-    display: block; /* Ensures the text following it starts on a new line */
+    color: #1f618d;
+    display: block;
 }
 
-/* TIP styling */
+				 
 .tip {
-    border-left: 4px solid #27ae60; /* Green color for tips */
-    background-color: #e9f7ef;      /* Light green background */
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
+    border-left: 4px solid #27ae60;
+    background-color: #e9f7ef;
+				  
+				   
+					   
 }
 
 .tip strong {
-    color: #1e8449; /* Dark green text for emphasis */
-    display: block; /* Ensures the text following it starts on a new line */
+    color: #1e8449;
+    display: block;
 }
 
-/* IMPORTANT styling */
+					   
 .important {
-    border-left: 4px solid #e74c3c; /* Red color for important */
-    background-color: #f9ebea;      /* Light red background */
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
+    border-left: 4px solid #e74c3c;
+    background-color: #f9ebea;
+				  
+				   
+					   
 }
 
 .important strong {
-    color: #a93226; /* Dark red text for emphasis */
-    display: block; /* Ensures the text following it starts on a new line */
+    color: #a93226;
+    display: block;
 }
 
-/* CAUTION styling */
+					 
 .caution {
-    border-left: 4px solid #e67e22; /* Orange color for caution */
-    background-color: #fdf2e9;      /* Light orange background */
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
+    border-left: 4px solid #e67e22;
+    background-color: #fdf2e9;
+				  
+				   
+					   
 }
 
 .caution strong {
-    color: #d35400; /* Dark orange text for emphasis */
-    display: block; /* Ensures the text following it starts on a new line */
+    color: #d35400;
+    display: block;
 }
-
