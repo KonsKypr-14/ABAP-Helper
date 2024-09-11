@@ -52,9 +52,9 @@ the following class that is triggered before the call of the BADI’s.
   <br><li>Implementing class name automatically created</li>
   <br><li>Uses proxy class (CL_EXITHANDLER)</li>
   <br><li>Not using Fallback Class</li>
-  <br><li>Implementation done in SE19</li>
+  <br><li>Implementation done in SE19</li></ul>
   <br><br> Kernal BADI:
-  <br><ul><li>We have to create interface<</li>
+  <br><ul><li>We have to create interface</li>
   <br><li>Implementing class name, we need to give</li>
   <br><li>Not uses proxy class</li>
   <br><li>Execution time less</li>
