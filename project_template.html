@@ -76,17 +76,20 @@ async function fetchMarkdownFiles() {
 
         // Populate the list in HTML
         const projectList = document.getElementById('project-list');
-        markdownFiles.forEach(file => {
-            const listItem = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = file.download_url;  // Download URL to markdown file
-            link.textContent = file.name;   // Display the file name
-            listItem.appendChild(link);
-            projectList.appendChild(listItem);
-        });
+markdownFiles.forEach(file => {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    
+    // Open the markdown file in project.html by passing its URL as a query parameter
+    link.href = `project.html?mdfile=${encodeURIComponent(file.download_url)}`;
+    link.textContent = file.name;   // Display the file name
+    listItem.appendChild(link);
+    projectList.appendChild(listItem);
+});
     } catch (error) {
         console.error('Error fetching markdown files:', error);
     }
+    
 }
 
 // Load markdown files on page load
