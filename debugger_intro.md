@@ -116,5 +116,30 @@ There are also different variants of breakpoints:
     <strong>WARNING:</strong> Avoid using <code>BREAK-POINT</code> in your code without specifying any user. This can cause problems (like stopping production flow) in a productive system.
 </div>
 
+<!-- Note Callout -->
+<div class="callout note">
+    <strong>NOTE:</strong> Useful information that users should know, even when skimming content.
+</div>
+
+<!-- Tip Callout -->
+<div class="callout tip">
+    <strong>TIP:</strong> Helpful advice for doing things better or more easily.
+</div>
+
+<!-- Important Callout -->
+<div class="callout important">
+    <strong>IMPORTANT:</strong> Key information users need to know to achieve their goal.
+</div>
+
+<!-- Caution Callout -->
+<div class="callout caution">
+    <strong>CAUTION:</strong> Advises about risks or negative outcomes of certain actions.
+</div>
+
+<!-- Warning Callout -->
+<div class="callout warning">
+    <strong>WARNING:</strong> Avoid using <code>BREAK-POINT</code> in your code without specifying any user. This can cause problems (like stopping production flow) in a productive system.
+</div>
+
 > [!WARNING]
 > Avoid to use BREAK-POINT in your code without specify any user. This can cause problem (like stop production flow) in an productive system.
