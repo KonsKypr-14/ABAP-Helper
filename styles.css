@@ -133,3 +133,28 @@ footer {
     color: #d35400;
     display: block;
 }
+
+code, pre {
+    background-color: #f4f4f4; /* Light gray background for code */
+    border: 1px solid #ddd;    /* Light border around code */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    font-size: 14px;
+    white-space: pre-wrap;     /* Ensure line breaks are preserved */
+    display: block;            /* Ensure it's displayed as a block */
+    max-width: 100%;
+    overflow-x: auto;          /* Horizontal scroll for long code lines */
+}
+
+/* Additional styling for preformatted text inside <pre> */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto;
+    max-width: 100%;
+    word-wrap: break-word; /* Break long lines within the box */
+    white-space: pre-wrap; /* Preserve newlines and spaces */
+}
