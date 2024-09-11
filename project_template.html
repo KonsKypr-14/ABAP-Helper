@@ -33,7 +33,7 @@
 </footer>
 
 <!-- Script to fetch and render Markdown -->
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
         if (typeof marked !== 'undefined') {
             fetch('debugger_intro.md')
@@ -52,6 +52,40 @@
         }
     });
 </script>
+-->
 
+<script>
+// GitHub API to fetch repository contents
+const repo = "konskypr-14/ABAP-Helper";  // Your GitHub repo
+const branch = "main";  // Your branch name (usually 'main' or 'master')
+const apiUrl = `https://api.github.com/repos/${repo}/contents/?ref=${branch}`;
+
+// Function to fetch the contents from GitHub
+async function fetchMarkdownFiles() {
+    try {
+        const response = await fetch(apiUrl);
+        const files = await response.json();
+
+        // Filter for .md files
+        const markdownFiles = files.filter(file => file.name.endsWith('.md'));
+
+        // Populate the list in HTML
+        const projectList = document.getElementById('project-list');
+        markdownFiles.forEach(file => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = file.download_url;  // Download URL to markdown file
+            link.textContent = file.name;   // Display the file name
+            listItem.appendChild(link);
+            projectList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('Error fetching markdown files:', error);
+    }
+}
+
+// Load markdown files on page load
+document.addEventListener('DOMContentLoaded', fetchMarkdownFiles);
+</script>
 </body>
 </html>
