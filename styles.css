@@ -64,10 +64,9 @@ footer {
     background-color: #333;
     color: white;
     width: 100%;
-    width: 100%;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
+    position: relative;
+	bottom: 0;
 }
 
 /* Styling for alerts */
