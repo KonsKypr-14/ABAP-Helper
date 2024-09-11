@@ -62,61 +62,6 @@ h2 {
     font-size: 18px;
 }
 
-/* Warning Callout Box */
-.warning {
-    border-left: 4px solid #f39c12;
-    background-color: #fef5e7;
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-.warning strong {
-    color: #c0392b;
-}
-/* Base style for all callouts */
-.callout {
-    padding: 10px;
-    margin: 20px 0;
-    border-left: 4px solid;
-    border-radius: 5px;
-}
-
-/* Specific callout types */
-.callout.warning {
-    border-color: #c0392b;
-    background-color: #fef2e2;
-}
-
-.callout.note {
-    border-color: #3498db;
-    background-color: #eaf5fc;
-}
-
-.callout.tip {
-    border-color: #27ae60;
-    background-color: #eafaf1;
-}
-
-.callout.important {
-    border-color: #e74c3c;
-    background-color: #fdf2f1;
-}
-
-.callout.caution {
-    border-color: #f39c12;
-    background-color: #fef5e7;
-}
-
-
-/* Callout header (optional) */
-.callout strong {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-
 /* WARNING styling */
 .warning {
     border-left: 4px solid #f39c12; /* Orange color for warning */
