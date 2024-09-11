@@ -1,3 +1,9 @@
+/* Main content should grow to fill available space */
+#markdown-content {
+    flex-grow: 1; /* Takes the remaining space */
+    padding: 20px; /* Add some padding to avoid footer overlap */
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -49,7 +55,7 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
