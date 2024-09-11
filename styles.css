@@ -45,9 +45,6 @@ header h1 {
     margin: 0;
 }
 
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 /* Allow section to grow and take up remaining space */
 section {
     max-width: 800px;
