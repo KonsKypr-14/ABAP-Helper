@@ -61,7 +61,93 @@
 -->
 
 <script>
+<script>
+// GitHub API to fetch repository contents
+const repo = "konskypr-14/ABAP-Helper";  // Your GitHub repo
+const branch = "main";  // Your branch name (usually 'main' or 'master')
+const titleFileUrl = `https://raw.githubusercontent.com/${repo}/${branch}/title_names.md`; // URL to title_names.md
 
+// Function to fetch the title_names.md file
+async function fetchTitleNames() {
+    try {
+        const response = await fetch(titleFileUrl);
+        const text = await response.text();
+        return parseTitleNames(text);
+    } catch (error) {
+        console.error('Error fetching title_names.md:', error);
+        return {};
+    }
+}
+
+// Function to parse title_names.md content and return an object mapping file names to titles
+function parseTitleNames(content) {
+    const titleMap = {};
+    const lines = content.trim().split('\n');
+    lines.forEach(line => {
+        const [title, file] = line.split(':');
+        if (title && file) {
+            titleMap[file.trim()] = title.trim();
+        }
+    });
+    return titleMap;
+}
+
+// Get the markdown file URL from the query parameter
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Fetch and display the markdown content
+async function loadMarkdownFile(mdFileUrl) {
+    try {
+        const response = await fetch(mdFileUrl);
+        const markdownText = await response.text();
+
+        // Convert markdown to HTML using marked.js
+        const htmlContent = marked(markdownText);
+
+        // Inject the HTML content into the page
+        const markdownContentDiv = document.getElementById('markdown-content');
+        markdownContentDiv.innerHTML = htmlContent;
+
+    } catch (error) {
+        console.error('Error loading markdown file:', error);
+        document.getElementById('markdown-content').innerHTML = "<p>Error loading the project content.</p>";
+    }
+}
+
+// On page load, get the mdfile query parameter, fetch titles, and load the corresponding markdown
+document.addEventListener('DOMContentLoaded', async () => {
+    const mdFileUrl = getQueryParam('mdfile');
+    
+    if (mdFileUrl) {
+        // Extract file name from the URL
+        const fileName = decodeURIComponent(mdFileUrl.split('/').pop());
+
+        // Fetch titles from title_names.md
+        const titleMap = await fetchTitleNames();
+
+        // Set the title and header
+        const title = titleMap[fileName] || fileName;
+        document.title = title;
+        document.querySelector('header h1').textContent = title;
+
+        // Load markdown file
+        loadMarkdownFile(mdFileUrl);
+    } else {
+        document.getElementById('markdown-content').innerHTML = "<p>No project file specified.</p>";
+    }
+});
+</script>
+
+
+
+
+
+
+    
+/* WORKING CORRECTLY
 // GitHub API to fetch repository contents
 const repo = "konskypr-14/ABAP-Helper";  // Your GitHub repo
 const branch = "main";  // Your branch name (usually 'main' or 'master')
@@ -130,7 +216,7 @@ async function fetchMarkdownFiles() {
 
 // Load markdown files on page load
 document.addEventListener('DOMContentLoaded', fetchMarkdownFiles);
-
+*/
 
 
 
