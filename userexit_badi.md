@@ -47,16 +47,16 @@ the following class that is triggered before the call of the BADI’s.
 <div class="note">
    <strong>NOTE:</strong> The use of CL_EXITHANDLER-GET_INSTANCE is for Classic BADI.
   <br>The use of CALL BADI is for Kernal BADI.
-  <br><ul>Interface name automatically generated</ul>
-  <br><ul>Implementing class name automatically created</ul>
-  <br><ul>Uses proxy class (CL_EXITHANDLER)</ul>
-  <br><ul>Not using Fallback Class</ul>
-  <br><ul>Implementation done in SE19</ul>
+  <br><ul><li>Interface name automatically generated</li>
+  <br><li>Implementing class name automatically created</li>
+  <br><li>Uses proxy class (CL_EXITHANDLER)</li>
+  <br><li>Not using Fallback Class</li>
+  <br><li>Implementation done in SE19</li>
   <br>Kernal BADI:
-  <br><ul>We have to create interface</ul>
-  <br><ul>Implementing class name, we need to give</ul>
-  <br><ul>Not uses proxy class</ul>
-  <br><ul>Execution time less</ul>
-  <br><ul>Uses Fallback Class</ul>
+  <br><ul><li>We have to create interface<</li>
+  <br><ul><li>Implementing class name, we need to give</li>
+  <br><ul><li>Not uses proxy class</li>
+  <br><ul><li>Execution time less</li>
+  <br><ul><li>Uses Fallback Class</li></ul>
   </div>
 
