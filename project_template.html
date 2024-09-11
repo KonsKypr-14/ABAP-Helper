@@ -85,7 +85,7 @@ markdownFiles.forEach(file => {
     link.href = `project.html?mdfile=${encodeURIComponent(file.download_url)}`;
     link.textContent = file.name;   // Display the file name
     listItem.appendChild(link);
-    projectList.clear();
+    projectList.innerHTML = "";
     projectList.appendChild(listItem);
 });
     } catch (error) {
