@@ -62,8 +62,6 @@ footer {
     padding: 10px;
     background-color: #333;
     color: white;
-					
-			  
     width: 100%;
 }
 
@@ -72,18 +70,12 @@ footer {
     padding: 10px;
     margin: 20px 0;
     border-radius: 5px;
-
-			   
-					
 }
 
 					 
 .warning {
     border-left: 4px solid #f39c12;
     background-color: #fef5e7;
-				  
-				   
-					   
 }
 
 .warning strong {
@@ -95,9 +87,6 @@ footer {
 .note {
     border-left: 4px solid #3498db;
     background-color: #eaf2f8;
-				  
-				   
-					   
 }
 
 .note strong {
@@ -109,9 +98,6 @@ footer {
 .tip {
     border-left: 4px solid #27ae60;
     background-color: #e9f7ef;
-				  
-				   
-					   
 }
 
 .tip strong {
@@ -123,9 +109,6 @@ footer {
 .important {
     border-left: 4px solid #e74c3c;
     background-color: #f9ebea;
-				  
-				   
-					   
 }
 
 .important strong {
@@ -137,9 +120,6 @@ footer {
 .caution {
     border-left: 4px solid #e67e22;
     background-color: #fdf2e9;
-				  
-				   
-					   
 }
 
 .caution strong {
