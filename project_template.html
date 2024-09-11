@@ -74,9 +74,9 @@ async function fetchMarkdownFiles() {
 
         // Filter for .md files
         const markdownFiles = files.filter(file => file.name.endsWith('.md'));
-
         // Populate the list in HTML
         const projectList = document.getElementById('project-list');
+        projectList.innerHTML = "";
 markdownFiles.forEach(file => {
     const listItem = document.createElement('li');
     const link = document.createElement('a');
@@ -85,7 +85,6 @@ markdownFiles.forEach(file => {
     link.href = `project.html?mdfile=${encodeURIComponent(file.download_url)}`;
     link.textContent = file.name;   // Display the file name
     listItem.appendChild(link);
-    projectList.innerHTML = "";
     projectList.appendChild(listItem);
 });
     } catch (error) {
