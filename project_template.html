@@ -61,6 +61,81 @@
 -->
 
 <script>
+
+// GitHub API to fetch repository contents
+const repo = "konskypr-14/ABAP-Helper";  // Your GitHub repo
+const branch = "main";  // Your branch name (usually 'main' or 'master')
+const apiUrl = `https://api.github.com/repos/${repo}/contents/?ref=${branch}`;
+const titleFileUrl = `https://raw.githubusercontent.com/${repo}/${branch}/title_names.md`; // URL to title_names.md
+
+// Function to fetch the title_names.md file
+async function fetchTitleNames() {
+    try {
+        const response = await fetch(titleFileUrl);
+        const text = await response.text();
+        return parseTitleNames(text);
+    } catch (error) {
+        console.error('Error fetching title_names.md:', error);
+        return {};
+    }
+}
+
+// Function to parse title_names.md content and return an object mapping file names to titles
+function parseTitleNames(content) {
+    const titleMap = {};
+    const lines = content.trim().split('\n');
+    lines.forEach(line => {
+        const [title, file] = line.split(':');
+        if (title && file) {
+            titleMap[file.trim()] = title.trim();
+        }
+    });
+    return titleMap;
+}
+
+// Function to fetch the contents from GitHub and display .md files with titles
+async function fetchMarkdownFiles() {
+    try {
+        // Fetch titles from title_names.md
+        const titleMap = await fetchTitleNames();
+        
+        // Fetch the list of files from the repository
+        const response = await fetch(apiUrl);
+        const files = await response.json();
+
+        // Filter for .md files
+        const markdownFiles = files.filter(file => file.name.endsWith('.md'));
+        
+        // Populate the list in HTML
+        const projectList = document.getElementById('project-list');
+        projectList.innerHTML = "";
+
+        markdownFiles.forEach(file => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            
+            // Get the title from the titleMap or default to the file name
+            const title = titleMap[file.name] || file.name;
+            
+            // Open the markdown file in project.html by passing its URL as a query parameter
+            link.href = `project.html?mdfile=${encodeURIComponent(file.download_url)}`;
+            link.textContent = title;   // Display the title or file name
+            listItem.appendChild(link);
+            projectList.appendChild(listItem);
+        });
+    } catch (error) {
+        console.error('Error fetching markdown files:', error);
+    }
+}
+
+// Load markdown files on page load
+document.addEventListener('DOMContentLoaded', fetchMarkdownFiles);
+
+
+
+
+
+/*    
 // GitHub API to fetch repository contents
 const repo = "konskypr-14/ABAP-Helper";  // Your GitHub repo
 const branch = "main";  // Your branch name (usually 'main' or 'master')
@@ -90,11 +165,11 @@ markdownFiles.forEach(file => {
     } catch (error) {
         console.error('Error fetching markdown files:', error);
     }
-    
 }
 
 // Load markdown files on page load
 document.addEventListener('DOMContentLoaded', fetchMarkdownFiles);
+*/
 </script>
 </body>
 </html>
