@@ -51,16 +51,14 @@ Finally we have the button in the GUI_STATUS.
 
 In the below example we will see the order to 
 
-> [!IMPORTANT]
-> Keep in mind that in FM of ALV, the names should be the same as the FORMS!
-> 
->       i_callback_pf_status_set = 'PF_STATUS'
->       i_callback_user_command  = 'USER_COMMAND'
-> 
->       FORM user_command USING pi_ucomm LIKE sy-ucomm
->                               pi_selfield TYPE slis_selfield.
-> 
->       FORM pf_status USING pi_extab TYPE slis_t_extab.
+<div class="important">
+    <strong>IMPORTANT:</strong> Keep in mind that in FM of ALV, the names should be the same as the FORMS!
+         <br>i_callback_pf_status_set = 'PF_STATUS'
+         <br>i_callback_user_command  = 'USER_COMMAND'
+         <br>FORM user_command USING pi_ucomm LIKE sy-ucomm
+         <br>                        pi_selfield TYPE slis_selfield.
+         <br>FORM pf_status USING pi_extab TYPE slis_t_extab.
+</div>
 
 ### Below an example code.
 
