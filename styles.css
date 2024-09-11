@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    display: fixed;
+    display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure body takes full viewport height */
 }
@@ -55,6 +55,10 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex-grow: 1; /* Allow section to grow in height */
+    width: 100%;      /* Ensure it still takes 100% of the available space up to 800px */
+    flex: 1;          /* Allow the body to grow and take up space */
+    margin: 10 auto;   /* Center body content horizontally */
+    padding: 10px;    /* Optional: Add padding for better aesthetics */
 }
 
 /* Remove fixed positioning from footer */
@@ -65,8 +69,7 @@ footer {
     color: white;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
-	bottom: 0;
+    margin-top: auto; /* Ensure footer stays at the bottom */
 }
 
 /* Styling for alerts */
