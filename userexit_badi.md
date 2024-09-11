@@ -25,26 +25,6 @@ the following class that is triggered before the call of the BADI’s.
 - Method Name: GET_INSTANCE
 
 <div class="note">
-    <strong>NOTE:</strong> Useful information that users should know, even when skimming content.
-</div>
-
-<div class="tip">
-    <strong>TIP:</strong> Helpful advice for doing things better or more easily.
-</div>
-
-<div class="important">
-    <strong>IMPORTANT:</strong> Key information users need to know to achieve their goal.
-</div>
-
-<div class="caution">
-    <strong>CAUTION:</strong> Advises about risks or negative outcomes of certain actions.
-</div>
-
-<div class="warning">
-    <strong>WARNING:</strong> Avoid using BREAK-POINT in your code without specifying any user. This can cause problems in a production system.
-</div>
-
-<div class="note">
    <strong>NOTE:</strong> The use of CL_EXITHANDLER-GET_INSTANCE is for Classic BADI.
   <br>The use of CALL BADI is for Kernal BADI.
     <br><br> Classic BADI:
