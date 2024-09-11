@@ -7,8 +7,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure body takes full viewport height */
-    max-width: 800px;  /* Standard width for the body */
-    margin: 0 auto;    /* Center the body horizontally */
 }
 
 img {
