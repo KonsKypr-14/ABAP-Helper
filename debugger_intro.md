@@ -112,5 +112,9 @@ There are also different variants of breakpoints:
 | Breakpoints at exceptions and system   exceptions     | The Debugger stops the program   immediately after a system exception, that is, after a runtime error has been intercepted. |
 
 
+<div class="warning">
+    <strong>WARNING:</strong> Avoid using <code>BREAK-POINT</code> in your code without specifying any user. This can cause problems (like stopping production flow) in a productive system.
+</div>
+
 > [!WARNING]
 > Avoid to use BREAK-POINT in your code without specify any user. This can cause problem (like stop production flow) in an productive system.
