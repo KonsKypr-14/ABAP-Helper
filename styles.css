@@ -61,3 +61,17 @@ h2 {
 .contact-info {
     font-size: 18px;
 }
+
+/* Warning Callout Box */
+.warning {
+    border-left: 4px solid #f39c12;
+    background-color: #fef5e7;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.warning strong {
+    color: #c0392b;
+}
+
