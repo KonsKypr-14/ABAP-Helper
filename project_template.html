@@ -104,7 +104,7 @@ async function fetchMarkdownFiles() {
         const files = await response.json();
 
         // Filter for .md files
-        const markdownFiles = files.filter(file => file.name.endsWith('.md'));
+        const markdownFiles = files.filter(file => file.name.endsWith('.md') && file.name !== 'title_names.md'));
         
         // Populate the list in HTML
         const projectList = document.getElementById('project-list');
