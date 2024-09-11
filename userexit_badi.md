@@ -24,22 +24,39 @@ the following class that is triggered before the call of the BADI’s.
 - Class name: CL_EXITHANDLER
 - Method Name: GET_INSTANCE
 
-> [!NOTE]
-> The use of CL_EXITHANDLER-GET_INSTANCE is for Classic BADI.
-> 
-> The use of CALL BADI is for Kernal BADI.
-> 
-> Classic BADI:
-> * Interface name automatically generated
-> * Implementing class name automatically created
-> * Uses proxy class (CL_EXITHANDLER)
-> * Not using Fallback Class
-> * Implementation done in SE19
-> 
-> Kernal BADI:
-> * We have to create interface
-> * Implementing class name, we need to give
-> * Not uses proxy class
-> * Execution time less
-> * Uses Fallback Class
+<div class="note">
+    <strong>NOTE:</strong> Useful information that users should know, even when skimming content.
+</div>
+
+<div class="tip">
+    <strong>TIP:</strong> Helpful advice for doing things better or more easily.
+</div>
+
+<div class="important">
+    <strong>IMPORTANT:</strong> Key information users need to know to achieve their goal.
+</div>
+
+<div class="caution">
+    <strong>CAUTION:</strong> Advises about risks or negative outcomes of certain actions.
+</div>
+
+<div class="warning">
+    <strong>WARNING:</strong> Avoid using BREAK-POINT in your code without specifying any user. This can cause problems in a production system.
+</div>
+
+<div class="note">
+   <strong>NOTE:</strong> The use of CL_EXITHANDLER-GET_INSTANCE is for Classic BADI.
+  <br>The use of CALL BADI is for Kernal BADI.
+  <br><ul>Interface name automatically generated</ul>
+  <br><ul>Implementing class name automatically created</ul>
+  <br><ul>Uses proxy class (CL_EXITHANDLER)</ul>
+  <br><ul>Not using Fallback Class</ul>
+  <br><ul>Implementation done in SE19</ul>
+  <br>Kernal BADI:
+  <br><ul>We have to create interface</ul>
+  <br><ul>Implementing class name, we need to give</ul>
+  <br><ul>Not uses proxy class</ul>
+  <br><ul>Execution time less</ul>
+  <br><ul>Uses Fallback Class</ul>
+  </div>
 
