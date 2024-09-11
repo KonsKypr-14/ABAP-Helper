@@ -110,23 +110,3 @@ There are also different variants of breakpoints:
 | Breakpoints at function modules | The Debugger stops the program   immediately before the specified function module is called. |
 | Breakpoints at Methods     | The Debugger stops the program   immediately before the specified method is called. |
 | Breakpoints at exceptions and system   exceptions     | The Debugger stops the program   immediately after a system exception, that is, after a runtime error has been intercepted. |
-
-<div class="note">
-    <strong>NOTE:</strong> Useful information that users should know, even when skimming content.
-</div>
-
-<div class="tip">
-    <strong>TIP:</strong> Helpful advice for doing things better or more easily.
-</div>
-
-<div class="important">
-    <strong>IMPORTANT:</strong> Key information users need to know to achieve their goal.
-</div>
-
-<div class="caution">
-    <strong>CAUTION:</strong> Advises about risks or negative outcomes of certain actions.
-</div>
-
-<div class="warning">
-    <strong>WARNING:</strong> Avoid using BREAK-POINT in your code without specifying any user. This can cause problems in a production system.
-</div>
