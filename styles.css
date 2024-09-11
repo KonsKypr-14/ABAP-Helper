@@ -128,6 +128,7 @@ h2 {
 
 .warning strong {
     color: #c0392b; /* Red text for emphasis */
+    display: block; /* Ensures the text following it starts on a new line */
 }
 
 /* NOTE styling */
@@ -141,6 +142,7 @@ h2 {
 
 .note strong {
     color: #1f618d; /* Dark blue text for emphasis */
+    display: block; /* Ensures the text following it starts on a new line */
 }
 
 /* TIP styling */
@@ -154,6 +156,7 @@ h2 {
 
 .tip strong {
     color: #1e8449; /* Dark green text for emphasis */
+    display: block; /* Ensures the text following it starts on a new line */
 }
 
 /* IMPORTANT styling */
@@ -167,6 +170,7 @@ h2 {
 
 .important strong {
     color: #a93226; /* Dark red text for emphasis */
+    display: block; /* Ensures the text following it starts on a new line */
 }
 
 /* CAUTION styling */
@@ -180,5 +184,6 @@ h2 {
 
 .caution strong {
     color: #d35400; /* Dark orange text for emphasis */
+    display: block; /* Ensures the text following it starts on a new line */
 }
 
