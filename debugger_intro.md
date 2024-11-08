@@ -31,8 +31,10 @@ Command=/H
 
 Type=SystemCommand
 
-> [!TIP]
-> Helpful when we need to debug a popup.
+<div class="tip">
+  <strong>TIP:</strong>
+<br> Helpful when we need to debug a popup.
+</div>
 
 ### Change from classic to newer debugger
 
