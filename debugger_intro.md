@@ -32,8 +32,7 @@ Command=/H
 Type=SystemCommand
 
 <div class="tip">
-  <strong>TIP:</strong>
-<br> Helpful when we need to debug a popup.
+  <strong>TIP:</strong> Helpful when we need to debug a popup.
 </div>
 
 ### Change from classic to newer debugger
@@ -73,8 +72,7 @@ Continue: Process the code until the next Break point / Watchpoint. If there is 
 ![image](https://github.com/user-attachments/assets/86fda690-b18f-4f68-b7cc-5d05305e4a31)
 
 <div class="tip">
-  <strong>TIP:</strong>
-<br>Shortcut for Goto: CTRL + SHIFT + Left Click
+  <strong>TIP:</strong> Shortcut for Goto: CTRL + SHIFT + Left Click
 </div>
 
 ### Useful information.
